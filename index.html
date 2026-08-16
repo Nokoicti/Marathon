@@ -5,14 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Marathon Doomsday</title>
 
-<!-- iPhone : plein écran une fois ajouté à l'écran d'accueil -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Doomsday">
 <meta name="theme-color" content="#241F14">
-<link rel="apple-touch-icon" href="data:image/png;base64,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">
-<link rel="icon" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -89,7 +88,7 @@ h1 em{font-style:normal;color:var(--oxblood)}
 .meta{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);margin-top:3px;letter-spacing:.02em}
 .tag{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.08em;
   text-transform:uppercase;padding:1px 5px;margin-left:5px;border:1px solid currentColor;vertical-align:1px}
-.tag.alt{color:var(--teal)} .tag.net{color:var(--ink-soft)} .tag.soon{color:var(--oxblood)}
+.tag.alt{color:var(--teal)} .tag.net{color:var(--ink-soft)} .tag.aos{color:var(--ink-soft)} .tag.soon{color:var(--oxblood)}
 .dur{font-family:var(--mono);font-size:12px;font-weight:500;white-space:nowrap;padding-top:4px}
 
 .stamp{grid-column:1/-1;justify-self:start;font-family:var(--display);font-weight:900;font-size:12px;
@@ -112,7 +111,6 @@ footer button{font-family:var(--mono);font-size:10.5px;background:none;border:1p
   color:var(--ink-soft);padding:7px 11px;margin-top:10px;cursor:pointer}
 .loading{font-family:var(--mono);font-size:11px;color:var(--ink-soft);padding:20px 0}
 
-/* bandeau d'installation, masqué une fois en mode app */
 .install{margin:16px 0 0;border:1.5px dashed var(--ink);padding:11px 13px;
   font-family:var(--mono);font-size:11px;line-height:1.6;color:var(--ink-soft)}
 .install b{color:var(--ink)}
@@ -126,12 +124,12 @@ footer button{font-family:var(--mono);font-size:10.5px;background:none;border:1p
 <header>
   <div class="eyebrow"><span>Dossier de visionnage</span><span id="today"></span></div>
   <h1>Marathon<br>avant <em>Doomsday</em></h1>
-  <div class="sub">81 entrées · ordre chronologique des événements</div>
+  <div class="sub">105 entrées · ordre chronologique des événements</div>
 </header>
 
 <div class="hero">
   <div class="days"><b id="dcount">—</b><span>jours avant la sortie · 18 déc. 2026</span></div>
-  <div class="verdict" id="verdict">Calcul en cours…<small id="verdictSub"></small></div>
+  <div class="verdict" id="verdict">Calcul en cours…</div>
 </div>
 
 <div class="stats">
@@ -149,6 +147,7 @@ footer button{font-family:var(--mono);font-size:10.5px;background:none;border:1p
 <div class="filters">
   <button class="chip" id="fNet" aria-pressed="true">Séries Netflix</button>
   <button class="chip" id="fAlt" aria-pressed="true">Univers parallèles</button>
+  <button class="chip" id="fAos" aria-pressed="true">Agents of SHIELD</button>
 </div>
 
 <div id="list" class="list"><div class="loading">Chargement de ta progression…</div></div>
@@ -159,8 +158,9 @@ footer button{font-family:var(--mono);font-size:10.5px;background:none;border:1p
 </div>
 
 <footer>
-  Durées des films = durée réelle. Durées des séries = épisodes × durée moyenne, donc approximatives.<br>
-  VisionQuest sort le 14 oct. en diffusion hebdomadaire et se termine début décembre.<br>
+  Durées des films = réelles · séries = épisodes × moyenne (approximatif). Agents of SHIELD ≈ 102 h à lui seul, canon débattu — d'où son filtre dédié.<br>
+  X-Men : Days of Future Past réinitialise la timeline Fox, donc Apocalypse et Dark Phoenix sont placés après lui malgré leurs années (1983, 1992).<br>
+  VisionQuest : placement estimé (diffusion hebdo du 14 oct. à début déc.). Logan (2029) est l'événement le plus lointain de toute la liste, d'où sa place juste avant Doomsday.<br>
   Progression sauvegardée sur cet appareil.
   <br><button id="reset">Tout décocher</button>
 </footer>
@@ -169,104 +169,129 @@ footer button{font-family:var(--mono);font-size:10.5px;background:none;border:1p
 
 <script>
 const TARGET = new Date('2026-12-18T00:00:00+09:00');
-const KEY = 'marathon-doomsday-v2';
+const KEY = 'marathon-doomsday-v3';
 
+// [n°, titre, époque, minutes, type ('' core / 'alt' / 'net' / 'aos'), note]
 const DATA = [
  [1,"Captain America: The First Avenger","1942-45",124,""],
- [2,"Captain Marvel","1995",123,""],
- [3,"Spider-Man","~2002",121,"alt"],
- [4,"Madame Web","2003",116,"alt"],
- [5,"Spider-Man 2","~2004",127,"alt"],
- [6,"Spider-Man 3","~2007",139,"alt"],
- [7,"Iron Man","2010",126,""],
- [8,"Iron Man 2","2011",124,""],
- [9,"The Incredible Hulk","2011",112,""],
- [10,"Thor","2011",115,""],
- [11,"Avengers","2012",143,""],
- [12,"The Amazing Spider-Man","~2012",136,"alt"],
- [13,"Thor: The Dark World","2013",112,""],
- [14,"Iron Man 3","2013",130,""],
- [15,"The Amazing Spider-Man 2","~2014",142,"alt"],
- [16,"Captain America: The Winter Soldier","2014",136,""],
- [17,"Guardians of the Galaxy","2014",121,""],
- [18,"Guardians of the Galaxy Vol. 2","2014",136,""],
- [19,"Daredevil — S1","2015",702,"net","13 ép."],
- [20,"Jessica Jones — S1","2015",728,"net","13 ép."],
- [21,"Avengers: Age of Ultron","2015",141,""],
- [22,"Ant-Man","2015",117,""],
- [23,"Daredevil — S2","2016",715,"net","13 ép."],
- [24,"Luke Cage — S1","2016",689,"net","13 ép."],
- [25,"Iron Fist — S1","2016",676,"net","13 ép."],
- [26,"The Defenders","2016",400,"net","8 ép."],
- [27,"Captain America: Civil War","2016",147,""],
- [28,"Black Widow","2016",134,""],
- [29,"Black Panther","2016",134,""],
- [30,"Spider-Man: Homecoming","2016",133,""],
- [31,"The Punisher — S1","2016",754,"net","13 ép."],
- [32,"Doctor Strange","2016-17",115,""],
- [33,"Jessica Jones — S2","2017",702,"net","13 ép."],
- [34,"Luke Cage — S2","2017",715,"net","13 ép."],
- [35,"Iron Fist — S2","2017",460,"net","10 ép."],
- [36,"Daredevil — S3","2018",715,"net","13 ép."],
- [37,"Thor: Ragnarok","2017",130,""],
- [38,"The Punisher — S2","2018",728,"net","13 ép."],
- [39,"Jessica Jones — S3","2018",702,"net","13 ép."],
- [40,"Venom","2018",112,"alt"],
- [41,"Ant-Man and the Wasp","2018",118,""],
- [42,"Avengers: Infinity War","2018",149,"","le Snap"],
- [43,"Avengers: Endgame","2018 → 2023",181,""],
- [44,"Loki — S1","hors du temps",291,"","6 ép."],
- [45,"WandaVision","2023",350,"","9 ép."],
- [46,"Shang-Chi","2024",132,""],
- [47,"The Falcon and the Winter Soldier","2024",300,"","6 ép."],
- [48,"Spider-Man: Far From Home","été 2024",129,""],
- [49,"Eternals","fin 2024",156,""],
- [50,"Venom: Let There Be Carnage","2020-21",97,"alt","bascule dans le MCU"],
- [51,"Spider-Man: No Way Home","2024",148,"","le carrefour"],
- [52,"Morbius","après NWH",104,"alt"],
- [53,"Venom: The Last Dance","après NWH",109,"alt"],
- [54,"Kraven the Hunter","~2024",127,"alt"],
- [55,"Hawkeye","Noël 2024",280,"","6 ép."],
- [56,"Doctor Strange in the Multiverse of Madness","2024-25",126,""],
- [57,"Moon Knight","début 2025",260,"","6 ép."],
- [58,"Ms. Marvel","2025",270,"","6 ép."],
- [59,"Thor: Love and Thunder","2025",118,""],
- [60,"She-Hulk","2025",290,"","9 ép."],
- [61,"Echo","2025",220,"","5 ép."],
- [62,"Black Panther: Wakanda Forever","fin 2025",161,""],
- [63,"Werewolf by Night","fin 2025",52,""],
- [64,"Guardians of the Galaxy Holiday Special","déc. 2025",44,""],
- [65,"Ironheart","2025",290,"","6 ép."],
- [66,"Ant-Man and the Wasp: Quantumania","2026",124,""],
- [67,"Guardians of the Galaxy Vol. 3","2026",150,""],
- [68,"Secret Invasion","2026",320,"","6 ép."],
- [69,"The Marvels","2026",105,""],
- [70,"Loki — S2","hors du temps",300,"","6 ép."],
- [71,"Deadpool & Wolverine","multivers",128,""],
- [72,"Agatha All Along","2026",400,"","9 ép."],
- [73,"Daredevil: Born Again — S1","début 2027",480,"","9 ép."],
- [74,"Captain America: Brave New World","2026-27",118,""],
- [75,"Thunderbolts*","fin 2027",126,""],
- [76,"The Fantastic Four: First Steps","Earth-828 → 616",115,""],
- [77,"The Punisher: One Last Kill","2027",60,""],
- [78,"Daredevil: Born Again — S2","2027",420,"","8 ép."],
- [79,"Wonder Man","2027-28",240,"","8 ép."],
- [80,"VisionQuest","2027-28",400,"","8 ép. · sortie 14 oct."],
- [81,"Spider-Man: Brand New Day","2028",150,"","dernier film avant Doomsday"]
+ [2,"X-Men: First Class","1962",132,"alt"],
+ [3,"X-Men Origins: Wolverine","~1979",107,"alt"],
+ [4,"Captain Marvel","1995",123,""],
+ [5,"X-Men","~2000",104,"alt"],
+ [6,"Spider-Man","~2002",121,"alt","trilogie Raimi"],
+ [7,"Madame Web","2003",116,"alt"],
+ [8,"X2: X-Men United","~2003",134,"alt"],
+ [9,"Spider-Man 2","~2004",127,"alt"],
+ [10,"X-Men: The Last Stand","~2006",104,"alt"],
+ [11,"Spider-Man 3","~2007",139,"alt"],
+ [12,"Iron Man","2010",126,""],
+ [13,"Iron Man 2","2011",124,""],
+ [14,"The Incredible Hulk","2011",112,""],
+ [15,"Thor","2011",115,""],
+ [16,"Avengers","2012",143,""],
+ [17,"The Amazing Spider-Man","~2012",136,"alt"],
+ [18,"Thor: The Dark World","2013",112,""],
+ [19,"Iron Man 3","2013",130,""],
+ [20,"The Wolverine","~2013",126,"alt","sa scène post-générique lance DoFP"],
+ [21,"X-Men: Days of Future Past","1973 ⇄ 2023",132,"alt","reset de la timeline Fox"],
+ [22,"X-Men: Apocalypse","1983 · timeline révisée",144,"alt"],
+ [23,"Dark Phoenix","1992 · timeline révisée",114,"alt"],
+ [24,"The Amazing Spider-Man 2","~2014",142,"alt"],
+ [25,"Captain America: The Winter Soldier","2014",136,""],
+ [26,"Agents of SHIELD — S1","2013-14",990,"aos","22 ép. · sa 2e moitié découle de Winter Soldier"],
+ [27,"Guardians of the Galaxy","2014",121,""],
+ [28,"Guardians of the Galaxy Vol. 2","2014",136,""],
+ [29,"Agents of SHIELD — S2","2014-15",990,"aos","22 ép."],
+ [30,"Daredevil — S1","2015",702,"net","13 ép."],
+ [31,"Jessica Jones — S1","2015",728,"net","13 ép."],
+ [32,"Avengers: Age of Ultron","2015",141,""],
+ [33,"Ant-Man","2015",117,""],
+ [34,"Agents of SHIELD — S3","2015-16",990,"aos","22 ép."],
+ [35,"Daredevil — S2","2016",715,"net","13 ép."],
+ [36,"Luke Cage — S1","2016",689,"net","13 ép."],
+ [37,"Iron Fist — S1","2016",676,"net","13 ép."],
+ [38,"The Defenders","2016",400,"net","8 ép."],
+ [39,"Deadpool","2016",108,"alt","univers Fox"],
+ [40,"Captain America: Civil War","2016",147,""],
+ [41,"Black Widow","2016",134,"","juste après Civil War"],
+ [42,"Black Panther","2016",134,""],
+ [43,"Spider-Man: Homecoming","2016",133,""],
+ [44,"The Punisher — S1","2016",754,"net","13 ép."],
+ [45,"Doctor Strange","2016-17",115,""],
+ [46,"Agents of SHIELD — S4","2016-17",990,"aos","22 ép."],
+ [47,"Jessica Jones — S2","2017",702,"net","13 ép."],
+ [48,"Luke Cage — S2","2017",715,"net","13 ép."],
+ [49,"Iron Fist — S2","2017",460,"net","10 ép."],
+ [50,"Thor: Ragnarok","2017",130,""],
+ [51,"Agents of SHIELD — S5","2017-18",990,"aos","22 ép."],
+ [52,"Daredevil — S3","2018",715,"net","13 ép."],
+ [53,"The Punisher — S2","2018",728,"net","13 ép."],
+ [54,"Jessica Jones — S3","2018",702,"net","13 ép."],
+ [55,"Deadpool 2","2018",119,"alt","univers Fox"],
+ [56,"Venom","2018",112,"alt"],
+ [57,"Spider-Man: Into the Spider-Verse","2018",117,"alt","animé · Earth-1610"],
+ [58,"Spider-Man: Across the Spider-Verse","16 mois après",140,"alt","animé"],
+ [59,"Ant-Man and the Wasp","2018",118,""],
+ [60,"Avengers: Infinity War","2018",149,"","le Snap"],
+ [61,"Agents of SHIELD — S6","2019 · pendant le Blip",590,"aos","13 ép. · le Blip n'y est jamais mentionné"],
+ [62,"Agents of SHIELD — S7","2019 + voyage temporel",590,"aos","13 ép."],
+ [63,"Avengers: Endgame","2018 → 2023",181,""],
+ [64,"Loki — S1","hors du temps",291,"","6 ép."],
+ [65,"What If...? — S1","multivers",270,"alt","9 ép. · animé"],
+ [66,"WandaVision","2023",350,"","9 ép."],
+ [67,"Shang-Chi","2024",132,""],
+ [68,"The Falcon and the Winter Soldier","2024",300,"","6 ép."],
+ [69,"Spider-Man: Far From Home","été 2024",129,""],
+ [70,"Eternals","fin 2024",156,""],
+ [71,"Venom: Let There Be Carnage","2020-21 · SSU",97,"alt","sa scène post-générique bascule dans le MCU"],
+ [72,"Spider-Man: No Way Home","2024",148,"","LE CARREFOUR"],
+ [73,"Morbius","après NWH",104,"alt"],
+ [74,"Venom: The Last Dance","après NWH",109,"alt"],
+ [75,"Kraven the Hunter","~2024",127,"alt"],
+ [76,"Hawkeye","Noël 2024",280,"","6 ép."],
+ [77,"Doctor Strange in the Multiverse of Madness","2024-25",126,""],
+ [78,"Moon Knight","début 2025",260,"","6 ép."],
+ [79,"Ms. Marvel","2025",270,"","6 ép."],
+ [80,"Thor: Love and Thunder","2025",118,""],
+ [81,"She-Hulk","2025",290,"","9 ép."],
+ [82,"Echo","2025",220,"","5 ép."],
+ [83,"Black Panther: Wakanda Forever","fin 2025",161,""],
+ [84,"Werewolf by Night","fin 2025",52,""],
+ [85,"Guardians of the Galaxy Holiday Special","déc. 2025",44,""],
+ [86,"Ironheart","2025",290,"","6 ép."],
+ [87,"Ant-Man and the Wasp: Quantumania","2026",124,""],
+ [88,"Guardians of the Galaxy Vol. 3","2026",150,""],
+ [89,"Secret Invasion","2026",320,"","6 ép."],
+ [90,"The Marvels","2026",105,""],
+ [91,"Loki — S2","hors du temps",300,"","6 ép."],
+ [92,"What If...? — S2","multivers",270,"alt","9 ép. · animé"],
+ [93,"Deadpool & Wolverine","multivers",128,""],
+ [94,"Agatha All Along","2026",400,"","9 ép."],
+ [95,"What If...? — S3","multivers",240,"alt","8 ép. · animé"],
+ [96,"Captain America: Brave New World","nov. 2026 → avr. 2027",118,""],
+ [97,"Daredevil: Born Again — S1","début 2027",480,"","9 ép. · simultané avec BNW"],
+ [98,"Thunderbolts*","fin 2027",126,""],
+ [99,"The Fantastic Four: First Steps","Earth-828 → 616",115,""],
+ [100,"The Punisher: One Last Kill","2027",60,""],
+ [101,"Daredevil: Born Again — S2","2027",420,"","8 ép."],
+ [102,"Wonder Man","2027-28",240,"","8 ép."],
+ [103,"VisionQuest","2027-28 · estimé",400,"","8 ép. · sortie 14 oct., hebdo"],
+ [104,"Spider-Man: Brand New Day","2028",150,"","dernier film avant Doomsday"],
+ [105,"Logan","2029 · futur Fox",137,"alt","l'événement le plus lointain de la liste"]
 ];
 
 let done = new Set();
-let show = {net:true, alt:true};
+let show = {net:true, alt:true, aos:true};
 
 const fmt = m => {
   const h = Math.floor(m/60), mm = Math.round(m%60);
   return h ? (mm ? h+" h "+String(mm).padStart(2,'0') : h+" h") : mm+" min";
 };
 const fmtH = m => (m/60).toFixed(m/60 >= 100 ? 0 : 1).replace('.',',')+" h";
-const visible = () => DATA.filter(d => (d[4]!=='net' || show.net) && (d[4]!=='alt' || show.alt));
+const visible = () => DATA.filter(d =>
+  (d[4]!=='net' || show.net) && (d[4]!=='alt' || show.alt) && (d[4]!=='aos' || show.aos));
 const daysLeft = () => Math.max(0, Math.ceil((TARGET - new Date())/86400000));
 
-/* --- stockage : window.storage si dispo (aperçu Claude), sinon localStorage (iPhone) --- */
 const store = {
   async load(){
     try{
@@ -296,8 +321,9 @@ function render(){
     const row = document.createElement('div');
     row.className = 'row' + (type==='alt' ? ' branch' : '') + (done.has(n) ? ' done' : '');
     const tag = type==='alt' ? '<span class="tag alt">Univers ||</span>'
-              : type==='net' ? '<span class="tag net">Netflix</span>' : '';
-    const soon = n===80 ? '<span class="tag soon">En cours</span>' : '';
+              : type==='net' ? '<span class="tag net">Netflix</span>'
+              : type==='aos' ? '<span class="tag aos">SHIELD</span>' : '';
+    const soon = n===103 ? '<span class="tag soon">En cours</span>' : '';
     row.innerHTML =
       '<div class="num">'+String(n).padStart(2,'0')+'</div>'+
       '<div><div class="t">'+title+tag+soon+'</div>'+
@@ -350,6 +376,9 @@ document.getElementById('fNet').addEventListener('click', e=>{
 document.getElementById('fAlt').addEventListener('click', e=>{
   show.alt = !show.alt; e.currentTarget.setAttribute('aria-pressed', show.alt); render(); persist();
 });
+document.getElementById('fAos').addEventListener('click', e=>{
+  show.aos = !show.aos; e.currentTarget.setAttribute('aria-pressed', show.aos); render(); persist();
+});
 document.getElementById('reset').addEventListener('click', ()=>{ done.clear(); render(); persist(); });
 
 document.getElementById('today').textContent =
@@ -360,11 +389,19 @@ if (window.navigator.standalone === true) {
   if (tip) tip.style.display = 'none';
 }
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(()=>{});
+}
+
 (async function init(){
   const s = await store.load();
-  if (s){ done = new Set(s.done || []); if (s.show) show = s.show; }
+  if (s){
+    done = new Set(s.done || []);
+    if (s.show) show = Object.assign({net:true, alt:true, aos:true}, s.show);
+  }
   document.getElementById('fNet').setAttribute('aria-pressed', show.net);
   document.getElementById('fAlt').setAttribute('aria-pressed', show.alt);
+  document.getElementById('fAos').setAttribute('aria-pressed', show.aos);
   render();
   setInterval(stats, 60000);
 })();
