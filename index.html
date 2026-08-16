@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marathon Doomsday</title>
+
+<!-- iPhone : plein écran une fois ajouté à l'écran d'accueil -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Doomsday">
+<meta name="theme-color" content="#241F14">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --manila:#CFC5A5; --paper:#E6DDC0; --paper-2:#DED3B4;
+  --ink:#241F14; --ink-soft:#5C523C;
+  --mustard:#A8820C; --oxblood:#8E2F2A; --teal:#2C5F55;
+  --rule:#9E9169;
+  --display:"Saira Condensed","Haettenschweiler","Arial Narrow",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --body:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;background:var(--manila)}
+body{
+  background:var(--manila);
+  background-image:
+    repeating-linear-gradient(0deg, rgba(36,31,20,.035) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgba(36,31,20,.02) 0 1px, transparent 1px 4px);
+  color:var(--ink); font-family:var(--body); font-size:15px; line-height:1.45;
+  padding:env(safe-area-inset-top) 0 calc(64px + env(safe-area-inset-bottom));
+  overscroll-behavior-y:contain;
+}
+.wrap{max-width:760px;margin:0 auto;
+  padding:0 max(14px, env(safe-area-inset-left)) 0 max(14px, env(safe-area-inset-right))}
+
+header{padding:26px 0 18px;border-bottom:2px solid var(--ink)}
+.eyebrow{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--ink-soft);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+h1{font-family:var(--display);font-weight:900;font-size:clamp(30px,9vw,52px);line-height:.92;
+  letter-spacing:-.01em;text-transform:uppercase;margin:10px 0 2px}
+h1 em{font-style:normal;color:var(--oxblood)}
+.sub{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);letter-spacing:.04em}
+
+.hero{margin:16px 0 0;border:2px solid var(--ink);background:var(--paper);
+  padding:16px 16px 14px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(135deg,transparent 0 22px,rgba(168,130,12,.05) 22px 44px)}
+.days{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.days b{font-family:var(--display);font-weight:900;font-size:clamp(52px,17vw,90px);
+  line-height:.82;letter-spacing:-.02em}
+.days span{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-soft);max-width:180px}
+.verdict{margin-top:13px;padding-top:11px;border-top:1px dashed var(--rule);
+  font-family:var(--display);font-weight:700;font-size:clamp(15px,4.4vw,20px);
+  text-transform:uppercase;letter-spacing:.01em}
+.verdict small{display:block;font-family:var(--mono);font-weight:400;font-size:11.5px;
+  letter-spacing:.02em;text-transform:none;color:var(--ink-soft);margin-top:5px;line-height:1.5}
+.ok{color:var(--teal)} .warn{color:var(--mustard)} .bad{color:var(--oxblood)}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink);
+  border:2px solid var(--ink);border-top:0}
+.stat{background:var(--paper-2);padding:10px 8px}
+.stat b{font-family:var(--display);font-weight:700;font-size:21px;display:block;line-height:1.1}
+.stat span{font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-soft)}
+.bar{height:9px;background:var(--paper-2);border:2px solid var(--ink);border-top:0}
+.bar i{display:block;height:100%;background:var(--mustard);width:0;transition:width .35s ease}
+
+.filters{display:flex;gap:7px;flex-wrap:wrap;margin:18px 0 6px}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.06em;border:1.5px solid var(--ink);
+  background:transparent;color:var(--ink);padding:8px 12px;cursor:pointer;text-transform:uppercase}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--manila)}
+
+.list{margin-top:14px;position:relative}
+.row{display:grid;grid-template-columns:26px 1fr auto;gap:9px;align-items:start;
+  padding:11px 0;border-bottom:1px solid var(--rule);position:relative}
+.row.branch{padding-left:20px}
+.row.branch::before{content:"";position:absolute;left:5px;top:0;bottom:0;width:2px;background:var(--teal);opacity:.55}
+.row.branch::after{content:"";position:absolute;left:5px;top:24px;width:11px;height:2px;background:var(--teal);opacity:.55}
+.num{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);padding-top:5px;text-align:right}
+.t{font-family:var(--display);font-weight:700;font-size:17.5px;line-height:1.14;letter-spacing:.005em}
+.meta{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);margin-top:3px;letter-spacing:.02em}
+.tag{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.08em;
+  text-transform:uppercase;padding:1px 5px;margin-left:5px;border:1px solid currentColor;vertical-align:1px}
+.tag.alt{color:var(--teal)} .tag.net{color:var(--ink-soft)} .tag.soon{color:var(--oxblood)}
+.dur{font-family:var(--mono);font-size:12px;font-weight:500;white-space:nowrap;padding-top:4px}
+
+.stamp{grid-column:1/-1;justify-self:start;font-family:var(--display);font-weight:900;font-size:12px;
+  letter-spacing:.2em;color:var(--oxblood);border:2px solid var(--oxblood);padding:1px 7px;
+  transform:rotate(-3.5deg);opacity:0;height:0;overflow:hidden}
+.row.done{background:linear-gradient(90deg,rgba(168,130,12,.13),transparent 70%)}
+.row.done .t{opacity:.55}
+.row.done .stamp{opacity:1;height:auto;overflow:visible;margin-top:6px}
+.row.done .num{color:var(--mustard);font-weight:600}
+.row .hit{position:absolute;inset:0;cursor:pointer;background:transparent;border:0;width:100%}
+.row .hit:focus-visible{outline:3px solid var(--mustard);outline-offset:-3px}
+
+.target{margin-top:18px;border:2px solid var(--oxblood);background:var(--paper);padding:14px;text-align:center}
+.target .t{font-size:24px;color:var(--oxblood)}
+.target .meta{color:var(--oxblood);opacity:.8}
+
+footer{margin-top:26px;padding-top:14px;border-top:1px dashed var(--rule);
+  font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);line-height:1.65}
+footer button{font-family:var(--mono);font-size:10.5px;background:none;border:1px solid var(--rule);
+  color:var(--ink-soft);padding:7px 11px;margin-top:10px;cursor:pointer}
+.loading{font-family:var(--mono);font-size:11px;color:var(--ink-soft);padding:20px 0}
+
+/* bandeau d'installation, masqué une fois en mode app */
+.install{margin:16px 0 0;border:1.5px dashed var(--ink);padding:11px 13px;
+  font-family:var(--mono);font-size:11px;line-height:1.6;color:var(--ink-soft)}
+.install b{color:var(--ink)}
+@media (display-mode:standalone){.install{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><span>Dossier de visionnage</span><span id="today"></span></div>
+  <h1>Marathon<br>avant <em>Doomsday</em></h1>
+  <div class="sub">81 entrées · ordre chronologique des événements</div>
+</header>
+
+<div class="hero">
+  <div class="days"><b id="dcount">—</b><span>jours avant la sortie · 18 déc. 2026</span></div>
+  <div class="verdict" id="verdict">Calcul en cours…<small id="verdictSub"></small></div>
+</div>
+
+<div class="stats">
+  <div class="stat"><b id="sDone">0</b><span>vus</span></div>
+  <div class="stat"><b id="sHours">0 h</b><span>déjà vus</span></div>
+  <div class="stat"><b id="sLeft">0 h</b><span>restants</span></div>
+</div>
+<div class="bar"><i id="barFill"></i></div>
+
+<div class="install" id="installTip">
+  <b>Pour l'installer sur l'iPhone :</b> ouvre cette page dans Safari, appuie sur le bouton Partager,
+  puis « Sur l'écran d'accueil ». L'app se lance ensuite en plein écran, sans barre de navigateur.
+</div>
+
+<div class="filters">
+  <button class="chip" id="fNet" aria-pressed="true">Séries Netflix</button>
+  <button class="chip" id="fAlt" aria-pressed="true">Univers parallèles</button>
+</div>
+
+<div id="list" class="list"><div class="loading">Chargement de ta progression…</div></div>
+
+<div class="target">
+  <div class="t">Avengers: Doomsday</div>
+  <div class="meta">18 décembre 2026 · ~2 h 45</div>
+</div>
+
+<footer>
+  Durées des films = durée réelle. Durées des séries = épisodes × durée moyenne, donc approximatives.<br>
+  VisionQuest sort le 14 oct. en diffusion hebdomadaire et se termine début décembre.<br>
+  Progression sauvegardée sur cet appareil.
+  <br><button id="reset">Tout décocher</button>
+</footer>
+
+</div>
+
+<script>
+const TARGET = new Date('2026-12-18T00:00:00+09:00');
+const KEY = 'marathon-doomsday-v2';
+
+const DATA = [
+ [1,"Captain America: The First Avenger","1942-45",124,""],
+ [2,"Captain Marvel","1995",123,""],
+ [3,"Spider-Man","~2002",121,"alt"],
+ [4,"Madame Web","2003",116,"alt"],
+ [5,"Spider-Man 2","~2004",127,"alt"],
+ [6,"Spider-Man 3","~2007",139,"alt"],
+ [7,"Iron Man","2010",126,""],
+ [8,"Iron Man 2","2011",124,""],
+ [9,"The Incredible Hulk","2011",112,""],
+ [10,"Thor","2011",115,""],
+ [11,"Avengers","2012",143,""],
+ [12,"The Amazing Spider-Man","~2012",136,"alt"],
+ [13,"Thor: The Dark World","2013",112,""],
+ [14,"Iron Man 3","2013",130,""],
+ [15,"The Amazing Spider-Man 2","~2014",142,"alt"],
+ [16,"Captain America: The Winter Soldier","2014",136,""],
+ [17,"Guardians of the Galaxy","2014",121,""],
+ [18,"Guardians of the Galaxy Vol. 2","2014",136,""],
+ [19,"Daredevil — S1","2015",702,"net","13 ép."],
+ [20,"Jessica Jones — S1","2015",728,"net","13 ép."],
+ [21,"Avengers: Age of Ultron","2015",141,""],
+ [22,"Ant-Man","2015",117,""],
+ [23,"Daredevil — S2","2016",715,"net","13 ép."],
+ [24,"Luke Cage — S1","2016",689,"net","13 ép."],
+ [25,"Iron Fist — S1","2016",676,"net","13 ép."],
+ [26,"The Defenders","2016",400,"net","8 ép."],
+ [27,"Captain America: Civil War","2016",147,""],
+ [28,"Black Widow","2016",134,""],
+ [29,"Black Panther","2016",134,""],
+ [30,"Spider-Man: Homecoming","2016",133,""],
+ [31,"The Punisher — S1","2016",754,"net","13 ép."],
+ [32,"Doctor Strange","2016-17",115,""],
+ [33,"Jessica Jones — S2","2017",702,"net","13 ép."],
+ [34,"Luke Cage — S2","2017",715,"net","13 ép."],
+ [35,"Iron Fist — S2","2017",460,"net","10 ép."],
+ [36,"Daredevil — S3","2018",715,"net","13 ép."],
+ [37,"Thor: Ragnarok","2017",130,""],
+ [38,"The Punisher — S2","2018",728,"net","13 ép."],
+ [39,"Jessica Jones — S3","2018",702,"net","13 ép."],
+ [40,"Venom","2018",112,"alt"],
+ [41,"Ant-Man and the Wasp","2018",118,""],
+ [42,"Avengers: Infinity War","2018",149,"","le Snap"],
+ [43,"Avengers: Endgame","2018 → 2023",181,""],
+ [44,"Loki — S1","hors du temps",291,"","6 ép."],
+ [45,"WandaVision","2023",350,"","9 ép."],
+ [46,"Shang-Chi","2024",132,""],
+ [47,"The Falcon and the Winter Soldier","2024",300,"","6 ép."],
+ [48,"Spider-Man: Far From Home","été 2024",129,""],
+ [49,"Eternals","fin 2024",156,""],
+ [50,"Venom: Let There Be Carnage","2020-21",97,"alt","bascule dans le MCU"],
+ [51,"Spider-Man: No Way Home","2024",148,"","le carrefour"],
+ [52,"Morbius","après NWH",104,"alt"],
+ [53,"Venom: The Last Dance","après NWH",109,"alt"],
+ [54,"Kraven the Hunter","~2024",127,"alt"],
+ [55,"Hawkeye","Noël 2024",280,"","6 ép."],
+ [56,"Doctor Strange in the Multiverse of Madness","2024-25",126,""],
+ [57,"Moon Knight","début 2025",260,"","6 ép."],
+ [58,"Ms. Marvel","2025",270,"","6 ép."],
+ [59,"Thor: Love and Thunder","2025",118,""],
+ [60,"She-Hulk","2025",290,"","9 ép."],
+ [61,"Echo","2025",220,"","5 ép."],
+ [62,"Black Panther: Wakanda Forever","fin 2025",161,""],
+ [63,"Werewolf by Night","fin 2025",52,""],
+ [64,"Guardians of the Galaxy Holiday Special","déc. 2025",44,""],
+ [65,"Ironheart","2025",290,"","6 ép."],
+ [66,"Ant-Man and the Wasp: Quantumania","2026",124,""],
+ [67,"Guardians of the Galaxy Vol. 3","2026",150,""],
+ [68,"Secret Invasion","2026",320,"","6 ép."],
+ [69,"The Marvels","2026",105,""],
+ [70,"Loki — S2","hors du temps",300,"","6 ép."],
+ [71,"Deadpool & Wolverine","multivers",128,""],
+ [72,"Agatha All Along","2026",400,"","9 ép."],
+ [73,"Daredevil: Born Again — S1","début 2027",480,"","9 ép."],
+ [74,"Captain America: Brave New World","2026-27",118,""],
+ [75,"Thunderbolts*","fin 2027",126,""],
+ [76,"The Fantastic Four: First Steps","Earth-828 → 616",115,""],
+ [77,"The Punisher: One Last Kill","2027",60,""],
+ [78,"Daredevil: Born Again — S2","2027",420,"","8 ép."],
+ [79,"Wonder Man","2027-28",240,"","8 ép."],
+ [80,"VisionQuest","2027-28",400,"","8 ép. · sortie 14 oct."],
+ [81,"Spider-Man: Brand New Day","2028",150,"","dernier film avant Doomsday"]
+];
+
+let done = new Set();
+let show = {net:true, alt:true};
+
+const fmt = m => {
+  const h = Math.floor(m/60), mm = Math.round(m%60);
+  return h ? (mm ? h+" h "+String(mm).padStart(2,'0') : h+" h") : mm+" min";
+};
+const fmtH = m => (m/60).toFixed(m/60 >= 100 ? 0 : 1).replace('.',',')+" h";
+const visible = () => DATA.filter(d => (d[4]!=='net' || show.net) && (d[4]!=='alt' || show.alt));
+const daysLeft = () => Math.max(0, Math.ceil((TARGET - new Date())/86400000));
+
+/* --- stockage : window.storage si dispo (aperçu Claude), sinon localStorage (iPhone) --- */
+const store = {
+  async load(){
+    try{
+      if (window.storage && window.storage.get){
+        const r = await window.storage.get(KEY);
+        if (r && r.value) return JSON.parse(r.value);
+      }
+    }catch(e){}
+    try{
+      const raw = localStorage.getItem(KEY);
+      if (raw) return JSON.parse(raw);
+    }catch(e){}
+    return null;
+  },
+  async save(state){
+    const s = JSON.stringify(state);
+    try{ localStorage.setItem(KEY, s); }catch(e){}
+    try{ if (window.storage && window.storage.set) await window.storage.set(KEY, s); }catch(e){}
+  }
+};
+
+function render(){
+  const list = document.getElementById('list');
+  list.innerHTML = '';
+  visible().forEach(d => {
+    const [n,title,year,min,type,note] = d;
+    const row = document.createElement('div');
+    row.className = 'row' + (type==='alt' ? ' branch' : '') + (done.has(n) ? ' done' : '');
+    const tag = type==='alt' ? '<span class="tag alt">Univers ||</span>'
+              : type==='net' ? '<span class="tag net">Netflix</span>' : '';
+    const soon = n===80 ? '<span class="tag soon">En cours</span>' : '';
+    row.innerHTML =
+      '<div class="num">'+String(n).padStart(2,'0')+'</div>'+
+      '<div><div class="t">'+title+tag+soon+'</div>'+
+      '<div class="meta">'+year+(note?' · '+note:'')+'</div></div>'+
+      '<div class="dur">'+fmt(min)+'</div>'+
+      '<div class="stamp">Vu</div>'+
+      '<button class="hit" aria-pressed="'+done.has(n)+'" aria-label="'+title+'"></button>';
+    row.querySelector('.hit').addEventListener('click', () => toggle(n));
+    list.appendChild(row);
+  });
+  stats();
+}
+
+function stats(){
+  const v = visible();
+  const total = v.reduce((s,d)=>s+d[3],0);
+  const seen  = v.filter(d=>done.has(d[0])).reduce((s,d)=>s+d[3],0);
+  const left  = total - seen;
+  const nDone = v.filter(d=>done.has(d[0])).length;
+  const d = daysLeft();
+  const perDay = left / 60 / Math.max(d,1);
+
+  document.getElementById('dcount').textContent = d;
+  document.getElementById('sDone').textContent = nDone+' / '+v.length;
+  document.getElementById('sHours').textContent = fmtH(seen);
+  document.getElementById('sLeft').textContent = fmtH(left);
+  document.getElementById('barFill').style.width = (total ? seen/total*100 : 0)+'%';
+
+  const vEl = document.getElementById('verdict');
+  let cls, txt;
+  if(left === 0){ cls='ok'; txt="Terminé. Tu es prêt."; }
+  else if(perDay <= 1.5){ cls='ok'; txt="Ça rentre largement"; }
+  else if(perDay <= 3){ cls='ok'; txt="Ça rentre"; }
+  else if(perDay <= 5){ cls='warn'; txt="Tendu mais faisable"; }
+  else { cls='bad'; txt="Trop juste — allège la liste"; }
+  vEl.className = 'verdict '+cls;
+  vEl.innerHTML = txt + '<small>'+
+    (left===0 ? 'Plus rien à regarder.' :
+      perDay.toFixed(1).replace('.',',')+' h par jour pendant '+d+' jours · soit '+
+      (perDay*7).toFixed(1).replace('.',',')+' h par semaine')+
+    '</small>';
+}
+
+function persist(){ store.save({done:[...done], show}); }
+function toggle(n){ done.has(n) ? done.delete(n) : done.add(n); render(); persist(); }
+
+document.getElementById('fNet').addEventListener('click', e=>{
+  show.net = !show.net; e.currentTarget.setAttribute('aria-pressed', show.net); render(); persist();
+});
+document.getElementById('fAlt').addEventListener('click', e=>{
+  show.alt = !show.alt; e.currentTarget.setAttribute('aria-pressed', show.alt); render(); persist();
+});
+document.getElementById('reset').addEventListener('click', ()=>{ done.clear(); render(); persist(); });
+
+document.getElementById('today').textContent =
+  new Date().toLocaleDateString('fr-FR',{day:'2-digit',month:'short',year:'numeric'});
+
+if (window.navigator.standalone === true) {
+  const tip = document.getElementById('installTip');
+  if (tip) tip.style.display = 'none';
+}
+
+(async function init(){
+  const s = await store.load();
+  if (s){ done = new Set(s.done || []); if (s.show) show = s.show; }
+  document.getElementById('fNet').setAttribute('aria-pressed', show.net);
+  document.getElementById('fAlt').setAttribute('aria-pressed', show.alt);
+  render();
+  setInterval(stats, 60000);
+})();
+</script>
+</body>
+</html>
